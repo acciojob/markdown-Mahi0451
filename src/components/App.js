@@ -1,28 +1,12 @@
-import React , {useEffect, useState} from "react"
+import React from 'react'
+import Mark1 from './Mark1'
+import Mark2 from './Mark2'
 
-
-const App = () => {
-    
-  const[change , setChange] = useState("")
-    useEffect(() => {
-        document.getElementById("markDown").innerText = change
-    }, [change])
-
+let App= ()=>{
     return (
-        <div className="app">
-          <div className="markDownContainer">
-            <textarea 
-            value={change} 
-            onChange={(e) => setChange(e.target.value)}
-            />
-          </div>
-          <div className="preview">
-            <h1 >
-                <b id="markDown"></b>
-            </h1>
-          </div>
+        <div className='app'>
+            <Mark1/>
         </div>
     )
 }
-
-export default App;
+export default App
